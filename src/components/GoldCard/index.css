@@ -1,0 +1,120 @@
+.goldcard-container {
+  width: 100%;
+  height: 500px;
+  background: rgb(249, 231, 85);
+  background: linear-gradient(
+    90deg,
+    rgb(253, 236, 104) 0%,
+    rgba(245, 243, 226, 1) 96%
+  );
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.goldcard-title {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  height: 50%;
+}
+
+.goldcard-title > span {
+  font-size: 5rem;
+  color: white;
+}
+
+.goldcard-whiteline {
+  width: 100%;
+  height: 50px;
+  background-color: #fffcb7;
+  display: flex;
+  align-items: center;
+}
+
+.goldcard-whiteline > span {
+  font-size: 2.3rem;
+  padding: 35px;
+  color: #1e1e1d;
+}
+
+.goldcard-pokemonname {
+  animation: render 1s ease-in;
+}
+
+.goldcard-img {
+  width: 23%;
+  height: 70%;
+  position: absolute;
+  right: 200px;
+  top: 50px;
+  animation: renderImg 3s ease;
+}
+
+@keyframes renderImg {
+  0% {
+    filter: brightness(0) invert(1);
+  }
+  50% {
+    filter: brightness(0%) invert(0) drop-shadow(-7px -10px 4px #2d2d2d);
+  }
+  100% {
+    filter: brightness(100%) invert(0);
+  }
+}
+
+.goldcard-types {
+  min-height: 20%;
+}
+
+.goldcard-types > div {
+  display: flex;
+  gap: 10px;
+  padding: 35px;
+  animation: render 1s ease-in;
+}
+
+@keyframes render {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .goldcard-title {
+    height: 100%;
+  }
+  .goldcard-title > span {
+    font-size: 3rem;
+    text-align: center;
+    z-index: 70;
+  }
+  .goldcard-types > div {
+    justify-content: center;
+  }
+  .goldcard-whiteline {
+    justify-content: center;
+    z-index: 70;
+  }
+  .goldcard-pokemonname {
+    font-size: 2rem;
+  }
+  .goldcard-img {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    right: 60px;
+    top: 70px;
+    z-index: 10;
+  }
+  .goldcard-container {
+    height: 700px;
+  }
+}

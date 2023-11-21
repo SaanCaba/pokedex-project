@@ -1,0 +1,19 @@
+.go-up-arrow {
+  position: fixed;
+  font-size: 5.5rem;
+  cursor: pointer;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.5s all ease-in;
+  z-index: 100;
+  color: rgb(44, 43, 43);
+}
+
+.go-up-arrow:hover {
+  color: rgb(88, 87, 87);
+}
+@media only screen and (max-width: 767px) {
+  .go-up-arrow {
+    font-size: 4rem;
+  }
+}

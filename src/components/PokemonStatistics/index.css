@@ -1,0 +1,47 @@
+.statistic-bar {
+  width: 90%;
+  height: 30px;
+  border-radius: 30px;
+  background-color: gray;
+}
+
+.statistic-filled-bar {
+  border-radius: 30px;
+  width: 10;
+  height: 30px;
+  width: 0px;
+}
+
+.statistic-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statistic-container > span {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.statistic-container > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 70%;
+}
+
+@media only screen and (max-width: 767px) {
+  .statistic-bar {
+    width: 80%;
+    height: 20px;
+  }
+  .statistic-filled-bar {
+    height: 20px;
+  }
+  .statistic-container > span {
+    white-space: wrap;
+    overflow: visible;
+    width: 50px;
+  }
+}

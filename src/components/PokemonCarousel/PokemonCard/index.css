@@ -1,0 +1,136 @@
+.cardcarousel-container {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(242, 242, 242);
+}
+
+.cardcarousel-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cardcarousel-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.cardcarousel-info > .cardcarousel-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.cardcarousel-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  z-index: 5;
+  overflow-y: scroll;
+}
+
+.cardcarousel-stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  animation: renderStats 1s ease-in;
+}
+
+@keyframes renderStats {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cardcarousel-stats > div {
+  width: 580px;
+}
+
+.cardcarousel-name {
+  font-size: 2.3rem;
+}
+
+.cardcarousel-id {
+  font-size: 2.3rem;
+}
+
+.cardcarousel-types {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cardcarousel-img-container {
+  display: flex;
+  justify-content: center;
+
+  z-index: 100;
+}
+
+.cardcarousel-img {
+  height: 350px;
+  width: 350px;
+}
+
+.cardcarousel-stats-title {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.nofav-icon {
+  transition: 0.5s all ease-in;
+  cursor: pointer;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.fav-icon {
+  transition: 0.5s all ease-in;
+  cursor: pointer;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.nofav-icon:hover {
+  transform: rotateZ(-10deg);
+}
+
+.fav-icon:hover {
+  transform: rotateZ(10deg);
+}
+
+.stats-container {
+  animation: renderStats 1s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .cardcarousel-name {
+    font-size: 1.6rem;
+  }
+
+  .cardcarousel-id {
+    font-size: 1.6rem;
+  }
+  .cardcarousel-stats-container {
+    padding: 10px;
+  }
+  .cardcarousel-stats > div {
+    width: 90%;
+  }
+  .cardcarousel-img {
+    height: 250px;
+    width: 250px;
+  }
+}
